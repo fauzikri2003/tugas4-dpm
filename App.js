@@ -40,6 +40,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Pengaturan Skor Pertandingan Futsal</Text>
+      
+      {/* Team A Section */}
       <View style={styles.teamContainer}>
         <Text style={styles.teamName}>{teamA}</Text>
         <Text style={styles.score}>{scoreA}</Text>
@@ -48,6 +50,8 @@ export default function App() {
           <Button title="-" onPress={() => handleSubtractScore('A')} />
         </View>
       </View>
+
+      {/* Team B Section */}
       <View style={styles.teamContainer}>
         <Text style={styles.teamName}>{teamB}</Text>
         <Text style={styles.score}>{scoreB}</Text>
@@ -56,6 +60,8 @@ export default function App() {
           <Button title="-" onPress={() => handleSubtractScore('B')} />
         </View>
       </View>
+
+      {/* Reset Button */}
       <View style={styles.resetButtonContainer}>
         <Button title="Reset Pertandingan" onPress={resetScores} color="red" />
       </View>
@@ -68,13 +74,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#0000FF', 
+    backgroundColor: '#0000FF', // Latar belakang biru
     padding: 20,
   },
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#FFFFFF', 
+    color: '#FFFFFF', // Teks putih
     marginBottom: 30,
     textAlign: 'center',
     textShadowColor: '#00008B',
@@ -84,7 +90,7 @@ const styles = StyleSheet.create({
   teamContainer: {
     marginVertical: 20,
     alignItems: 'center',
-    backgroundColor: '#1E90FF', 
+    backgroundColor: '#FFFFFF', // Latar belakang putih
     padding: 15,
     borderRadius: 10,
     shadowColor: '#000',
@@ -95,15 +101,15 @@ const styles = StyleSheet.create({
   teamName: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#FFFFFF', // Teks putih
+    color: '#000000', // Teks hitam
     marginBottom: 10,
   },
   score: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#FFFFFF', 
+    color: '#000000', // Teks hitam
     marginVertical: 10,
-    textShadowColor: '#00008B',
+    textShadowColor: '#A9A9A9', // Sedikit bayangan abu-abu
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 2,
   },
